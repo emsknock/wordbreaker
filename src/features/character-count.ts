@@ -19,11 +19,12 @@ export default (input: string): { [letter: string]: number }[] => {
 
 	}
 
-	return letterFrequency.map(
+	return letterFrequency
 		// As per above, lower case 'a' maps to char code 0x61, so converting
-		// a position in the English alphabet to a character is as simple
-		// as adding the offset 0x61 to it:
-		(count, index) => ({ [String.fromCharCode(index + 0x61)]: count })
-	);
+		// a position in the English alphabet to a character is as simple as
+		// adding the offset 0x61 to it:
+		.map<[number, string]>((count, index) => [count, String.fromCharCode(index + 0x61)])
+		.filter(([count]) => count > 0)
+		.map(([count, letter]) => ({ [letter]: count }));
 
 }
