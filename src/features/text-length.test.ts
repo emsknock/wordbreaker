@@ -12,25 +12,25 @@ test(
 );
 
 test(
-	"handles two words correctly",
+	"handles two words",
 	"Hello World",
 	11, 10
 );
 
 test(
-	"handles a single word correctly",
+	"handles a single word",
 	"Foobar",
 	6, 6
 );
 
 test(
-	"handles multiple words correclty",
+	"handles multiple words",
 	"When the sunlight strikes raindrops in the air",
 	46, 39
 );
 
 test(
-	"handles punctuation correctly",
+	"handles punctuation",
 	"Word. Word, word: word! Word?",
 	29, 25
 );
