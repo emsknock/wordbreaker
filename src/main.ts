@@ -1,12 +1,34 @@
 import Fastify from "fastify";
 
+import characterCount from "features/character-count";
+import textLength from "features/text-length";
+import wordCount from "features/word-count";
+
 const server = Fastify();
 
-server.get(
+server.get<{ Body: { text: string } }>(
 	"/analyze",
-	async (req) => ({
-		hello: "world"
-	})
+	{
+		schema: {
+			body: {
+				type: "object",
+				properties: {
+					text: { type: "string" }
+				}
+			}
+		}
+	},
+	async (request) => {
+
+		const { text } = request.body;
+
+		return {
+			characterCount: characterCount(text),
+			textLength: textLength(text),
+			wordCount: wordCount(text),
+		};
+
+	}
 );
 
 server.listen(
