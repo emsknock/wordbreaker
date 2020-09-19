@@ -4,7 +4,7 @@ export default (input: string): { [letter: string]: number }[] => {
 	// A's char count is stored at 0, B's at 1 etc
 	const letterFrequency = Array.from({ length: 26 }, () => 0);
 
-	for(const char of input.toLowerCase()) {
+	for (const char of input.toLowerCase()) {
 
 		const charCode = char.charCodeAt(0);
 
