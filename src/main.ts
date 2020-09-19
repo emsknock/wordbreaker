@@ -6,7 +6,7 @@ import wordCount from "./features/word-count";
 
 const server = Fastify();
 
-server.get<{ Body: { text: string } }>(
+server.post<{ Body: { text: string } }>(
 	"/analyze",
 	{
 		schema: {
