@@ -14,7 +14,7 @@ server.setNotFoundHandler(
 );
 
 server.post<{ Body: { text: string } }>(
-    "/analyze",
+    "*",
     {
         schema: {
             body: {
