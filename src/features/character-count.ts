@@ -27,4 +27,4 @@ export default (input: string): { [letter: string]: number }[] => {
 		.filter(([count]) => count > 0)
 		.map(([count, letter]) => ({ [letter]: count }));
 
-}
+};
