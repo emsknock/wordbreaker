@@ -1,6 +1,6 @@
 # Wordbreaker
 
-My solution to Dream Broker's code challenge [programming assignment](https://challenge.dreambroker.jobs/245768c7-b82f-4a77-abbc-d1214acf7163).
+My solution to Dream Broker's code challenge programming assignment [located here](https://challenge.dreambroker.jobs/245768c7-b82f-4a77-abbc-d1214acf7163) or alternatively in [./ASSIGNMENT.md](./ASSIGNMENT.md).
 
 Hosted at https://ems-wordbreaker.herokuapp.com — since it's a free dyno, it might take a while to start up.
 
