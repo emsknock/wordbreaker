@@ -32,5 +32,6 @@ it("throws a 404 and gives instructions when doing something else than POSTing /
         .inject()
         .get("/")
         .end();
-    expect(r.payload).toBe("Please send a PORT request to /analyze with a JSON { text: string } body");
+    expect(r.statusCode).toBe(404);
+    expect(r.payload).toBe("Please send a POST request to /analyze with a JSON { text: string } body");
 });

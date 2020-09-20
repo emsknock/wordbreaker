@@ -7,7 +7,10 @@ import wordCount from "../features/word-count";
 const server = Fastify();
 
 server.setNotFoundHandler(
-    async () => "Please send a POST request to /analyze with a JSON { text: string } body"
+    async (req, reply) => {
+        reply.code(404);
+        return "Please send a POST request to /analyze with a JSON { text: string } body";
+    }
 );
 
 server.post<{ Body: { text: string } }>(
@@ -16,6 +19,8 @@ server.post<{ Body: { text: string } }>(
         schema: {
             body: {
                 type: "object",
+                additionalProperties: false,
+                required: ["text"],
                 properties: {
                     text: { type: "string" }
                 }
