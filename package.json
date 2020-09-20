@@ -1,35 +1,35 @@
 {
-  "name": "wordbreaker",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./build/main.js",
-  "scripts": {
-    "lint": "eslint ./src --fix",
-    "postinstall": "npm build",
-    "build": "tsc",
-    "start": "node ./build/main.js",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/emsknock/wordbreaker.git"
-  },
-  "author": "Emma Koskinen",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/emsknock/wordbreaker/issues"
-  },
-  "homepage": "https://github.com/emsknock/wordbreaker#readme",
-  "devDependencies": {
-    "@tsconfig/node12": "^1.0.7",
-    "@types/jest": "^26.0.14",
-    "@types/node": "^14.11.1",
-    "@typescript-eslint/eslint-plugin": "^4.1.1",
-    "@typescript-eslint/parser": "^4.1.1",
-    "eslint": "^7.9.0",
-    "fastify": "^3.4.1",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.3.0",
-    "typescript": "^4.0.3"
-  }
+    "name": "wordbreaker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./build/main.js",
+    "scripts": {
+        "lint": "eslint ./src --fix",
+        "postinstall": "npm build",
+        "build": "tsc",
+        "start": "node ./build/main.js",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/emsknock/wordbreaker.git"
+    },
+    "author": "Emma Koskinen",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/emsknock/wordbreaker/issues"
+    },
+    "homepage": "https://github.com/emsknock/wordbreaker#readme",
+    "devDependencies": {
+        "@tsconfig/node12": "^1.0.7",
+        "@types/jest": "^26.0.14",
+        "@types/node": "^14.11.1",
+        "@typescript-eslint/eslint-plugin": "^4.1.1",
+        "@typescript-eslint/parser": "^4.1.1",
+        "eslint": "^7.9.0",
+        "fastify": "^3.4.1",
+        "jest": "^26.4.2",
+        "ts-jest": "^26.3.0",
+        "typescript": "^4.0.3"
+    }
 }

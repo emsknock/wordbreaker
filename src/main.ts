@@ -1,7 +1,8 @@
 import server from "./server";
 
 server.listen(
-    Number(process.env.PORT ?? 3000), "0.0.0.0",
+    Number(process.env.PORT ?? 3000),
+    "0.0.0.0",
     (err) => {
         if (err) {
             console.error(err.message);
