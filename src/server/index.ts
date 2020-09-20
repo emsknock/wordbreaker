@@ -4,6 +4,8 @@ import characterCount from "../features/character-count";
 import textLength from "../features/text-length";
 import wordCount from "../features/word-count";
 
+console.log(`Starting Wordbreaker on port ${process.env.PORT || 3000}`);
+
 const server = Fastify();
 
 server.setNotFoundHandler(
