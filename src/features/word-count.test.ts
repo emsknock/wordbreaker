@@ -35,3 +35,7 @@ it("handles tabs", () => {
 it("handles carriage returns", () => {
     expect(wordCount("Hello\rWorld")).toBe(2);
 });
+
+it("handles empty string correctly", () => {
+    expect(wordCount("")).toBe(0);
+});

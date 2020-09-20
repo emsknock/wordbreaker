@@ -35,3 +35,7 @@ it("ignores whitespace", () => {
         { a: 1 }, { b: 1 }, { c: 1 }, { d: 1 }, { e: 1 }, { f: 1 }
     ]);
 });
+
+it("handles an empty string correctly", () => {
+    expect(characterCount("")).toEqual([]);
+});

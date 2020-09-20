@@ -64,3 +64,9 @@ test(
     "Hello\rWorld",
     11, 10
 );
+
+test(
+    "handles empty string correctly",
+    "",
+    0, 0
+);
