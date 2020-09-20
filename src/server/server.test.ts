@@ -35,3 +35,12 @@ it("throws a 404 and gives instructions when doing something else than POSTing /
     expect(r.statusCode).toBe(404);
     expect(r.payload).toBe("Please send a POST request to /analyze with a JSON { text: string } body");
 });
+
+it("throws 400 on malformatted POST body", async () => {
+    const r = await server
+        .inject()
+        .post("/analyze")
+        .payload({})
+        .end();
+    expect(r.statusCode).toBe(400);
+});
