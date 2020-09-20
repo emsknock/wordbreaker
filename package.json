@@ -5,7 +5,6 @@
     "main": "./build/main.js",
     "scripts": {
         "lint": "eslint ./src --fix",
-        "postinstall": "npm build",
         "build": "tsc",
         "start": "node ./build/main.js",
         "test": "jest"
