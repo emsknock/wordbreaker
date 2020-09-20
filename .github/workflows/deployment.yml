@@ -20,7 +20,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           eslint: true
-          eslitn_dir: src
+          eslitn_dir: src/
           auto_fix: true
 
       - run: npm run test
