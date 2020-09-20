@@ -1,8 +1,8 @@
 import Fastify from "fastify";
 
-import characterCount from "./features/character-count";
-import textLength from "./features/text-length";
-import wordCount from "./features/word-count";
+import characterCount from "../features/character-count";
+import textLength from "../features/text-length";
+import wordCount from "../features/word-count";
 
 const server = Fastify();
 
