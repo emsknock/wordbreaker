@@ -5,6 +5,6 @@ export default (input: string) => ({
     // is inherently the wrong decision.
     withoutSpaces: input.replace(/\s+/g, "").length,
 
-    withSpaces: input.length,
+    withSpaces: input.length - 1,
 
 });
