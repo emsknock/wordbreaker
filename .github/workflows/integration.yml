@@ -20,6 +20,7 @@ jobs:
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             eslint: true
+            eslint_dir: src
 
         - run: npm run test
         
