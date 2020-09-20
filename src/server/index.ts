@@ -6,6 +6,10 @@ import wordCount from "../features/word-count";
 
 const server = Fastify();
 
+server.setNotFoundHandler(
+    async () => "Please send a POST request to /analyze with a JSON { text: string } body"
+);
+
 server.post<{ Body: { text: string } }>(
     "/analyze",
     {

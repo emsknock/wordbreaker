@@ -26,3 +26,11 @@ it("seems to fetch correct data for all the fields", () => {
         { "e": 2 }, { "h": 1 }, { "i": 1 }, { "l": 2 }, { "m": 1 }, { "o": 1 }, { "s": 1 }, { "t": 1 }
     ]);
 });
+
+it("throws a 404 and gives instructions when doing something else than POSTing /analyze", async () => {
+    const r = await server
+        .inject()
+        .get("/")
+        .end();
+    expect(r.payload).toBe("Please send a PORT request to /analyze with a JSON { text: string } body");
+});
