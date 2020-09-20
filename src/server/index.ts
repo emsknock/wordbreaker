@@ -7,28 +7,28 @@ import wordCount from "../features/word-count";
 const server = Fastify();
 
 server.post<{ Body: { text: string } }>(
-	"/analyze",
-	{
-		schema: {
-			body: {
-				type: "object",
-				properties: {
-					text: { type: "string" }
-				}
-			}
-		}
-	},
-	async (request) => {
+    "/analyze",
+    {
+        schema: {
+            body: {
+                type: "object",
+                properties: {
+                    text: { type: "string" }
+                }
+            }
+        }
+    },
+    async (request) => {
 
-		const { text } = request.body;
+        const { text } = request.body;
 
-		return {
-			characterCount: characterCount(text),
-			textLength: textLength(text),
-			wordCount: wordCount(text),
-		};
+        return {
+            characterCount: characterCount(text),
+            textLength: textLength(text),
+            wordCount: wordCount(text),
+        };
 
-	}
+    }
 );
 
 export default server;
